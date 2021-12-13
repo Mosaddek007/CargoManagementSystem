@@ -143,6 +143,7 @@ namespace CargoManagementSystem
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(183, 35);
             this.textBox3.TabIndex = 3;
+//            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
@@ -260,6 +261,7 @@ namespace CargoManagementSystem
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

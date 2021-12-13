@@ -14,7 +14,7 @@ namespace CargoManagementSystem
 {
     public partial class Form4 : Form
     {
-        string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
+string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
         public Form4()
         {
             InitializeComponent();
@@ -75,5 +75,10 @@ namespace CargoManagementSystem
         {
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }       
     }
 }
