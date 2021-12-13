@@ -124,7 +124,7 @@ namespace CargoManagementSystem
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 35);
-            this.textBox1.TabIndex = 25;
+            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -133,7 +133,7 @@ namespace CargoManagementSystem
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(183, 35);
-            this.textBox2.TabIndex = 25;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
@@ -142,7 +142,7 @@ namespace CargoManagementSystem
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(183, 35);
-            this.textBox3.TabIndex = 25;
+            this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
@@ -151,7 +151,7 @@ namespace CargoManagementSystem
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(183, 35);
-            this.textBox4.TabIndex = 25;
+            this.textBox4.TabIndex = 4;
             // 
             // label6
             // 
@@ -172,7 +172,7 @@ namespace CargoManagementSystem
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(183, 35);
-            this.textBox5.TabIndex = 25;
+            this.textBox5.TabIndex = 5;
             // 
             // button1
             // 
@@ -183,7 +183,7 @@ namespace CargoManagementSystem
             this.button1.Location = new System.Drawing.Point(376, 507);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 40);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -242,7 +242,7 @@ namespace CargoManagementSystem
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(183, 35);
-            this.textBox6.TabIndex = 25;
+            this.textBox6.TabIndex = 6;
             // 
             // Form4
             // 
