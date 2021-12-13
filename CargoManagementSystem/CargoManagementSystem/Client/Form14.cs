@@ -46,7 +46,7 @@ namespace CargoManagementSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "" && dateTimePicker1.Text != "")
             {
                 SqlConnection con = new SqlConnection(cs);
                 string query = "insert into cargoair (id,bid,fcity,tcity,t_departure) values(@id,@bid,@fcity,@tcity,@t_departure)";
@@ -56,7 +56,7 @@ namespace CargoManagementSystem
                 cmd.Parameters.AddWithValue("bid", textBox2.Text);
                 cmd.Parameters.AddWithValue("fcity", comboBox1.Text.ToString());
                 cmd.Parameters.AddWithValue("tcity", comboBox2.Text.ToString());
-                cmd.Parameters.AddWithValue("t_departure", textBox3.Text);
+                cmd.Parameters.AddWithValue("t_departure", dateTimePicker1.Text);
 
                 int b = cmd.ExecuteNonQuery();
                 if (b > 0)
@@ -64,7 +64,6 @@ namespace CargoManagementSystem
                     MessageBox.Show("Your Cargo is Booked");
                     textBox1.Clear();
                     textBox2.Clear();
-                    textBox3.Clear();
                 }
                 else
                 {
@@ -80,7 +79,7 @@ namespace CargoManagementSystem
             cair c = this.cost;
             c(sych, syrj, disc);
 
-            MessageBox.Show("Goa to Chittagong Cost:" + sum);
+            MessageBox.Show("Total Cost Will Be :" + sum);
         }
 
         private void Form14_Load(object sender, EventArgs e)
