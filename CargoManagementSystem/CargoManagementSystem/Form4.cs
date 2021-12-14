@@ -137,15 +137,6 @@ namespace CargoManagementSystem
             {
                 errorProvider4.Clear();
             }
-            /*if (string.IsNullOrEmpty(textBox2.Text) == true)
-            {
-                textBox2.Focus();
-                errorProvider4.SetError(this.textBox2, "ID Cannot Be Empty!");
-            }
-            else
-            {
-                errorProvider4.Clear();
-            }*/
 
         }
 

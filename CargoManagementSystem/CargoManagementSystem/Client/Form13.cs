@@ -91,6 +91,11 @@ namespace CargoManagementSystem
         private void Form13_Load(object sender, EventArgs e)
         {
             textBox1.Text = Form2.Id.ToString();
+            SqlConnection con = new SqlConnection(cs);
+            SqlDataAdapter sda = new SqlDataAdapter("Select isnull (max(cast(bid as int)),0)+1 from cargoship", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            textBox2.Text = dt.Rows[0][0].ToString();
         }
     }
 
