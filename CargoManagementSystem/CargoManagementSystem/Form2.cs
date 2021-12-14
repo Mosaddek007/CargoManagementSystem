@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CargoManagementSystem
 {
     public partial class Form2 : Form
     {
+        string idvalidation = @"^\d+$";
         string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
         public Form2()
         {
@@ -24,7 +26,7 @@ namespace CargoManagementSystem
         public static string email;
         public static string pass;
         public static string cname;
-        public static int phone;
+        public static string phone;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -86,7 +88,7 @@ namespace CargoManagementSystem
                     name = dt.Rows[0]["name"].ToString();
                     Id = Convert.ToInt32(dt.Rows[0]["id"].ToString());
                     email = dt.Rows[0]["email"].ToString();
-                    phone = Convert.ToInt32(dt.Rows[0]["phone"].ToString());
+                    phone = (dt.Rows[0]["phone"].ToString());
                     cname = dt.Rows[0]["company_name"].ToString();
                     pass = dt.Rows[0]["pass"].ToString();
 
@@ -104,6 +106,19 @@ namespace CargoManagementSystem
             {
                 MessageBox.Show("Please Enter Your ID & PassWord");
             }
-        }  
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(textBox1.Text, idvalidation) == false)
+            {
+                textBox1.Focus();
+                errorProvider1.SetError(this.textBox1, "ID Is Invalid !");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
     }
 }

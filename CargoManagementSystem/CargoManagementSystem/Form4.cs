@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CargoManagementSystem
 {
     public partial class Form4 : Form
     {
-string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
+        string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+        string mobileNumber = @"(^([+]{1}[8]{2}|0088)?(01){1}[3-9]{1}\d{8})$";
+        string idvalidation  = @"^\d+$";
+
+        string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
         public Form4()
         {
             InitializeComponent();
@@ -52,7 +57,7 @@ string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].Conn
                 cmd.Parameters.AddWithValue("company_name", textBox6.Text);
 
                 int b = cmd.ExecuteNonQuery();
-                if (b>0)
+                if (b > 0)
                 {
                     Form2 f2 = new Form2();
                     f2.ShowDialog();
@@ -61,7 +66,7 @@ string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].Conn
                 }
                 else
                 {
-                    MessageBox.Show("Your Information Is Incorrect");
+                    MessageBox.Show("Your Information Is Incorrect !");
                 }
             }
             else
@@ -79,6 +84,95 @@ string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].Conn
         private void Form4_Load(object sender, EventArgs e)
         {
 
-        }       
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(textBox3.Text, pattern) == false)
+            {
+                textBox3.Focus();
+                errorProvider1.SetError(this.textBox3, "Email Is Invalid !");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+
+            if (Regex.IsMatch(textBox5.Text, mobileNumber) == false)
+            {
+                textBox5.Focus();
+                errorProvider2.SetError(this.textBox5, "Mobile number is invalid, Try with Country Code");
+            }
+            else
+            {
+                errorProvider2.Clear();
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text) == true)
+            {
+                textBox1.Focus();
+                errorProvider3.SetError(this.textBox1, "Name Cannot Be Empty!");
+            }
+            else
+            {
+                errorProvider3.Clear();
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(textBox2.Text, idvalidation) == false)
+            {
+                textBox2.Focus();
+                errorProvider4.SetError(this.textBox2, "ID is invalid, Try Integer Numbers");
+            }
+            else
+            {
+                errorProvider4.Clear();
+            }
+            /*if (string.IsNullOrEmpty(textBox2.Text) == true)
+            {
+                textBox2.Focus();
+                errorProvider4.SetError(this.textBox2, "ID Cannot Be Empty!");
+            }
+            else
+            {
+                errorProvider4.Clear();
+            }*/
+
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox4.Text) == true)
+            {
+                textBox4.Focus();
+                errorProvider5.SetError(this.textBox4, "PassWord Cannot Be Empty!");
+            }
+            else
+            {
+                errorProvider5.Clear();
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox6.Text) == true)
+            {
+                textBox6.Focus();
+                errorProvider6.SetError(this.textBox6, "Company Name Cannot Be Empty!");
+            }
+            else
+            {
+                errorProvider6.Clear();
+            }
+        }
     }
 }

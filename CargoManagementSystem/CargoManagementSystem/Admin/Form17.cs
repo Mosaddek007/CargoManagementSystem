@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CargoManagementSystem
 {
     public partial class Form17 : Form
     {
+        string idvalidation = @"^\d+$";
         string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
         public Form17()
         {
@@ -56,10 +58,10 @@ namespace CargoManagementSystem
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != "")
+            if (textBox2.Text != "" && Regex.IsMatch(textBox2.Text, @"^\d+$"))
             {
                 SqlConnection con = new SqlConnection(cs);
-                string query = "select *from cargoair where id = @id";
+                string query = "select *from cargoair where id=@id";
                 SqlCommand cmd = new SqlCommand(query, con);
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -67,19 +69,24 @@ namespace CargoManagementSystem
 
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    int Id = Convert.ToInt32(dt.Rows[0]["id"].ToString());
+                    int bid = Convert.ToInt32(dt.Rows[0]["bid"].ToString());
+                    string fcity = dt.Rows[0]["fcity"].ToString();
+                    string tcity = dt.Rows[0]["tcity"].ToString();
+                    string t_departure = dt.Rows[0]["t_departure"].ToString();
 
-                int Id = Convert.ToInt32(dt.Rows[0]["id"].ToString());
-                int bid = Convert.ToInt32(dt.Rows[0]["bid"].ToString());
-                string fcity = dt.Rows[0]["fcity"].ToString();
-                string tcity = dt.Rows[0]["tcity"].ToString();
-                string t_departure = dt.Rows[0]["t_departure"].ToString();
-
-                textBox4.Text = Id.ToString();
-                textBox1.Text = bid.ToString();
-                textBox5.Text = fcity;
-                textBox6.Text = tcity;
-                textBox3.Text = t_departure;
-
+                    textBox4.Text = Id.ToString();
+                    textBox1.Text = bid.ToString();
+                    textBox5.Text = fcity;
+                    textBox6.Text = tcity;
+                    textBox3.Text = t_departure;
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter Correct ID");
+                }
             }
             else
             {
@@ -137,6 +144,19 @@ namespace CargoManagementSystem
 
             }
 
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(textBox2.Text, idvalidation) == false)
+            {
+                textBox2.Focus();
+                errorProvider1.SetError(this.textBox2, "ID is invalid !");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }

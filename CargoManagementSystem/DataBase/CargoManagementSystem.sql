@@ -21,10 +21,14 @@ name varchar (100) not null,
 id int not null,
 email varchar(100) not null,
 pass varchar(100) not null,
-phone int not null,
+phone nvarchar(100) not null,
 company_name varchar(100) not null,
 primary key (id)
 );
+
+
+drop table Client
+
 
 select *from Client
 
@@ -44,12 +48,15 @@ select *from fback
 
 create table cargovan
 (
-id int not null,
+id nvarchar(100) not null,
 bid int not null,
 fcity varchar (100),
 tcity varchar (100),
 t_departure varchar (100),
 );
+
+
+drop table cargovan
 
 select *from cargovan
 

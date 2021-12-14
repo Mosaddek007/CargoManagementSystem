@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CargoManagementSystem
 {
     public partial class Form20 : Form
     {
+        string idvalidation = @"^\d+$";
         string cs = ConfigurationManager.ConnectionStrings["CargoManagementSystem"].ConnectionString;
         public Form20()
         {
@@ -69,6 +71,19 @@ namespace CargoManagementSystem
         private void Form20_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(textBox1.Text, idvalidation) == false)
+            {
+                textBox1.Focus();
+                errorProvider1.SetError(this.textBox1, "ID Is Invalid !");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }

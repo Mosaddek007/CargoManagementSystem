@@ -351,9 +351,9 @@ namespace CargoManagementSystem
             this.label1.ForeColor = System.Drawing.Color.Beige;
             this.label1.Location = new System.Drawing.Point(423, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 42);
+            this.label1.Size = new System.Drawing.Size(229, 42);
             this.label1.TabIndex = 27;
-            this.label1.Text = "CMS Creators";
+            this.label1.Text = "CBS Creators";
             // 
             // Form3
             // 

@@ -29,6 +29,7 @@ namespace CargoManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form16));
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@ namespace CargoManagementSystem
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -49,11 +52,12 @@ namespace CargoManagementSystem
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -136,6 +140,7 @@ namespace CargoManagementSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox3);
@@ -159,6 +164,30 @@ namespace CargoManagementSystem
             this.panel1.Size = new System.Drawing.Size(1093, 572);
             this.panel1.TabIndex = 36;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Beige;
+            this.label8.Location = new System.Drawing.Point(796, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(273, 29);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Approved Bookings";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Beige;
+            this.label5.Location = new System.Drawing.Point(611, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 29);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Bookings";
             // 
             // textBox3
             // 
@@ -273,30 +302,23 @@ namespace CargoManagementSystem
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(183, 35);
             this.textBox2.TabIndex = 55;
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
-            // label8
+            // errorProvider1
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Beige;
-            this.label8.Location = new System.Drawing.Point(796, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 29);
-            this.label8.TabIndex = 69;
-            this.label8.Text = "Approved Bookings";
+            this.errorProvider1.ContainerControl = this;
             // 
-            // label5
+            // label9
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Beige;
-            this.label5.Location = new System.Drawing.Point(611, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 29);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Bookings";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Beige;
+            this.label9.Location = new System.Drawing.Point(21, 472);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 23);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Search By ID";
             // 
             // Form16
             // 
@@ -317,6 +339,7 @@ namespace CargoManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +367,7 @@ namespace CargoManagementSystem
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -63,9 +63,9 @@ namespace CargoManagementSystem
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.Parameters.AddWithValue("@name", textBox1.Text);
-            cmd.Parameters.AddWithValue("@id", textBox2.Text);
-            cmd.Parameters.AddWithValue("@pass", textBox3.Text);
-            cmd.Parameters.AddWithValue("@email", textBox4.Text);
+            cmd.Parameters.AddWithValue("@id", textBox2.Text);          
+            cmd.Parameters.AddWithValue("@email", textBox3.Text);
+            cmd.Parameters.AddWithValue("@pass", textBox4.Text);
             cmd.Parameters.AddWithValue("@phone", textBox5.Text);
             cmd.Parameters.AddWithValue("@company_name", textBox6.Text);
 
@@ -73,8 +73,14 @@ namespace CargoManagementSystem
             if (a > 0)
             {
                 MessageBox.Show("Update successful !");
-
+                textBox1.Text = Form2.name;
+                textBox2.Text = Form2.Id.ToString();
+                textBox3.Text = Form2.email;
+                textBox4.Text = Form2.pass;
+                textBox5.Text = Form2.phone.ToString();
+                textBox6.Text = Form2.cname;
             }
+
 
             else
             {
