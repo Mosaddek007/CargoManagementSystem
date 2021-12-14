@@ -56,3 +56,32 @@ C:\Users\mhs53\Desktop\CargoManagementSystem\CargoManagementSystem\CargoManageme
 C:\Users\mhs53\Desktop\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\mhs53\Desktop\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.exe
 C:\Users\mhs53\Desktop\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.pdb
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\bin\Debug\CargoManagementSystem.exe.config
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\bin\Debug\CargoManagementSystem.exe
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\bin\Debug\CargoManagementSystem.pdb
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.csproj.AssemblyReference.cache
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form1.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form10.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form12.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form13.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form14.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form15.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form16.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form17.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form18.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form19.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form2.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form20.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form23.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form3.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form4.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form5.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form6.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form7.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form8.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Form9.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.Properties.Resources.resources
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.csproj.GenerateResource.cache
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.csproj.CoreCompileInputs.cache
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.exe
+D:\C# Project\CargoManagementSystem\CargoManagementSystem\CargoManagementSystem\obj\Debug\CargoManagementSystem.pdb
