@@ -27,12 +27,14 @@ namespace CargoManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();
             this.Hide();
+            f2.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

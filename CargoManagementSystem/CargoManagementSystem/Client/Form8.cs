@@ -22,12 +22,14 @@ namespace CargoManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
+        {           
+            Form6 f6 = new Form6();
             this.Hide();
+            f6.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -79,6 +81,10 @@ namespace CargoManagementSystem
                 textBox4.Text = Form2.pass;
                 textBox5.Text = Form2.phone.ToString();
                 textBox6.Text = Form2.cname;
+
+                Form6 f6 = new Form6();
+                this.Hide();
+                f6.Show();
             }
 
 
@@ -86,6 +92,7 @@ namespace CargoManagementSystem
             {
                 MessageBox.Show("Update failed!", "Enter valid information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

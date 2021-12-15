@@ -40,17 +40,20 @@ namespace CargoManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form1 f1 = new Form1();
             this.Hide();
+            f1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form4 f4 = new Form4();
+            this.Hide();
             f4.ShowDialog();
         }
 
@@ -93,9 +96,9 @@ namespace CargoManagementSystem
                     pass = dt.Rows[0]["pass"].ToString();
 
                     Form6 f6 = new Form6();
-                    f6.ShowDialog();
+                    
                     this.Hide();
-                    f6.Show();
+                    f6.ShowDialog();
                 }
                 else
                 {

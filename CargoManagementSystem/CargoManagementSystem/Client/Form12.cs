@@ -33,12 +33,14 @@ namespace CargoManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form7 f7 = new Form7();
             this.Hide();
+            f7.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -66,7 +68,11 @@ namespace CargoManagementSystem
                     MessageBox.Show("Your Cargo is Booked");
                     textBox1.Clear();
                     textBox2.Clear();
-                  
+
+                    Form7 f7 = new Form7();
+                    this.Hide();
+                    f7.Show();
+
 
                 }
                 else

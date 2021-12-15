@@ -24,12 +24,14 @@ namespace CargoManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();
             this.Hide();
+            f2.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -42,24 +44,28 @@ namespace CargoManagementSystem
         {                   
 
             Form8 f8 = new Form8();
+            this.Hide();
             f8.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Form7 f7 = new Form7();
+            this.Hide();
             f7.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Form9 f9 = new Form9();
+            this.Hide();
             f9.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Form10 f10 = new Form10();
+            this.Hide();
             f10.ShowDialog();
         }
 
@@ -70,13 +76,15 @@ namespace CargoManagementSystem
 
         private void button8_Click(object sender, EventArgs e)
         {
+            
             Form2 f2 = new Form2();
+            this.Hide();
             f2.ShowDialog();
         }
 
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

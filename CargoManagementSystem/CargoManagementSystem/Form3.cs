@@ -19,12 +19,15 @@ namespace CargoManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form1 f1 = new Form1();
             this.Hide();
+            f1.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

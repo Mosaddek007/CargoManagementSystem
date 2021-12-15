@@ -38,9 +38,9 @@ namespace CargoManagementSystem
                 if (dt.Rows.Count > 0)
                 {
                     Form5 f5 = new Form5();
-                    f5.ShowDialog();
+                  
                     this.Hide();
-                    f5.Show();
+                    f5.ShowDialog();
                 }
                 else
                 {
@@ -55,12 +55,14 @@ namespace CargoManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form1 f1 = new Form1();
             this.Hide();
+            f1.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
