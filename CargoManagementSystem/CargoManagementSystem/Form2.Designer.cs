@@ -42,6 +42,7 @@ namespace CargoManagementSystem
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +112,7 @@ namespace CargoManagementSystem
             this.textBox2.Location = new System.Drawing.Point(190, 253);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(183, 35);
             this.textBox2.TabIndex = 17;
             // 
@@ -155,6 +157,7 @@ namespace CargoManagementSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label2);
@@ -171,6 +174,19 @@ namespace CargoManagementSystem
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.Beige;
+            this.checkBox1.Location = new System.Drawing.Point(255, 294);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(128, 17);
+            this.checkBox1.TabIndex = 22;
+            this.checkBox1.Text = "Show PassWord";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form2
             // 
@@ -207,5 +223,6 @@ namespace CargoManagementSystem
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
